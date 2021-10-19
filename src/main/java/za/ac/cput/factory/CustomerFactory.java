@@ -1,8 +1,8 @@
-/*CustomerFactory.java
+/**CustomerFactory.java
 Factory for the CustomerFactory
 Author:Andy William Hine (219259038)
 Date:07 June 2021
- */
+ **/
 
 package za.ac.cput.factory;
 
