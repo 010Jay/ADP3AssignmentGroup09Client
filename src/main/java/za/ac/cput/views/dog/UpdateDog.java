@@ -277,6 +277,7 @@ public class UpdateDog extends JFrame implements ActionListener {
                 if (result != null) {
                     JOptionPane.showMessageDialog(null, "You have successfully updated a dog.");
 
+                    txtDogId.setText("");
                     txtName.setText("");
                     txtAge.setText("");
                     txtColor.setText("");
