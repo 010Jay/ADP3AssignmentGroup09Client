@@ -100,9 +100,6 @@ public class GetAllCustomers extends JFrame implements ActionListener {
         table.getColumnModel().getColumn(3).setPreferredWidth(400);
         table.getColumnModel().getColumn(4).setPreferredWidth(200);
         table.getColumnModel().getColumn(5).setPreferredWidth(200);
-        table.getColumnModel().getColumn(6).setPreferredWidth(400);
-        table.getColumnModel().getColumn(7).setPreferredWidth(200);
-        table.getColumnModel().getColumn(8).setPreferredWidth(400);
 
         //Add table to scroll pane
         sPane = new JScrollPane(table);

@@ -91,8 +91,29 @@ public class Customer {
     public String getHomeAddress(){return homeAddress;}
     public long getPhoneNumber(){return  phoneNumber;}
 
+    public void setCustomerID(int customerID) {
+        this.customerID = customerID;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+
+    public void setHomeAddress(String homeAddress) {
+        this.homeAddress = homeAddress;
+    }
+
+    public void setPhoneNumber(long phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 
     @Override
     public String toString() {

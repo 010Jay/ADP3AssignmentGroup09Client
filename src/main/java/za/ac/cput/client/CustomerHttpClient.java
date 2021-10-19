@@ -17,11 +17,11 @@ public class CustomerHttpClient {
 
     private static RestTemplate restTemplate = new RestTemplate();
 
-    private final static String CREATE_URL = "http://localhost:8080/dog/create";
-    private final static String READ_URL = "http://localhost:8080/dog/read";
-    private final static String UPDATE_URL = "http://localhost:8080/dog/update";
-    private final static String DELETE_URL = "http://localhost:8080/dog/delete";
-    private final static String GET_ALL_URL = "http://localhost:8080/dog/getAll";
+    private final static String CREATE_URL = "http://localhost:8080/customer/create";
+    private final static String READ_URL = "http://localhost:8080/customer/read";
+    private final static String UPDATE_URL = "http://localhost:8080/customer/update";
+    private final static String DELETE_URL = "http://localhost:8080/customer/delete";
+    private final static String GET_ALL_URL = "http://localhost:8080/customer/getAll";
 
 
     public static Customer create(Customer customer)
