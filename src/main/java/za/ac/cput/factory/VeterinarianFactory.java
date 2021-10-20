@@ -1,5 +1,6 @@
 package za.ac.cput.factory;
 import za.ac.cput.entity.Veterinarian;
+import za.ac.cput.generic.GenericHelper;
 
 /*
     VeterinarianFactory.java
@@ -8,17 +9,15 @@ import za.ac.cput.entity.Veterinarian;
     Date: 05 June 2021
  */
 public class VeterinarianFactory {
-    private static int vetID =30;
-
 
     public static Veterinarian createVeterinarian(String name, String surname, long phoneNumber, String emailAddress) {
 
         return new Veterinarian.Builder()
-                .setVetId(++vetID)
+                .setVetId(GenericHelper.generateUniqueIntId())
                 .setName(name)
                 .setSurname(surname)
                 .setPhoneNumber(phoneNumber)
-                .setEmailAddress(surname)
+                .setEmailAddress(emailAddress)
                 .build();
 
 
@@ -27,7 +26,7 @@ public class VeterinarianFactory {
     public static Veterinarian updateVeterinarian(int VetId , String name, String surname, int phoneNumber, String emailAddress)
     {
         return new Veterinarian.Builder()
-                .setVetId(vetID)
+                .setVetId(VetId)
                 .setName(name)
                 .setSurname(surname)
                 .setPhoneNumber(phoneNumber)

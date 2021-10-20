@@ -68,8 +68,7 @@ public class UpdateVeterinarian extends JFrame implements ActionListener {
         //Add Gridlayout to panels
         northPanel.setLayout(new FlowLayout());
         centerPanel.setLayout(new GridLayout(5,3));
-        southPanel.setLayout(new GridLayout(4,3));
-
+        southPanel.setLayout(new GridLayout(2,4));
 
         //Set font
         lblHeading.setFont(ftHeading);
@@ -122,7 +121,7 @@ public class UpdateVeterinarian extends JFrame implements ActionListener {
 
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.pack();
-        this.setSize(640, 420);
+        this.setSize(640, 320);
         this.setVisible(true);
         //Add action listener to buttons | mouse listener to hyperlink
         btnRead.addActionListener(this);
@@ -151,7 +150,7 @@ public class UpdateVeterinarian extends JFrame implements ActionListener {
 
                     txtName.setText(oldVeterinarian.getName());
                     txtSurname.setText(String.valueOf(oldVeterinarian.getSurname()));
-                    txtPhoneNumber.setText(String.valueOf(oldVeterinarian.getPhoneNumber()));
+                    txtPhoneNumber.setText(String.valueOf("0" + oldVeterinarian.getPhoneNumber()));
                     txtEmailAddress.setText(oldVeterinarian.getEmailAddress());
 
 

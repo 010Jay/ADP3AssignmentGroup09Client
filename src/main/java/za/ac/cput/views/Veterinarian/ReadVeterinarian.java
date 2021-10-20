@@ -116,7 +116,7 @@ public class ReadVeterinarian extends JFrame implements ActionListener {
 
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.pack();
-        this.setSize(640, 420);
+        this.setSize(640, 320);
         this.setVisible(true);
         //Add action listener to buttons | mouse listener to hyperlink
         btnRead.addActionListener(this);
@@ -143,7 +143,7 @@ public class ReadVeterinarian extends JFrame implements ActionListener {
 
                     lblName1.setText(result.getName());
                     lblSurname1.setText(result.getSurname());
-                    lblPhoneNumber1.setText(String.valueOf(result.getPhoneNumber()));
+                    lblPhoneNumber1.setText("0" + String.valueOf(result.getPhoneNumber()));
                     lblEmailAddress1.setText(result.getEmailAddress());
 
                 }

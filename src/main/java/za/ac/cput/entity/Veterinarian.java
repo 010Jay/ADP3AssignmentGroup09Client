@@ -15,6 +15,8 @@ package za.ac.cput.entity;
         private long phoneNumber;
         private String emailAddress;
 
+        protected Veterinarian (){}
+
         public Veterinarian(Builder builder) {
             this.vetId = builder.vetId;
             this.name = builder.name;

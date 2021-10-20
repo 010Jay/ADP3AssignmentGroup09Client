@@ -84,7 +84,7 @@ public class GetAllVeterinarian extends JFrame implements ActionListener {
                 rows[a] = vetList[i].getVetId();
                 rows[++a] = vetList[i].getName();
                 rows[++a] = vetList[i].getSurname();
-                rows[++a] = vetList[i].getPhoneNumber();
+                rows[++a] = "0" + vetList[i].getPhoneNumber();
                 rows[++a] = vetList[i].getEmailAddress();
                 model.addRow(rows);
             }
@@ -94,9 +94,8 @@ public class GetAllVeterinarian extends JFrame implements ActionListener {
         table.getColumnModel().getColumn(0).setPreferredWidth(400);
         table.getColumnModel().getColumn(1).setPreferredWidth(400);
         table.getColumnModel().getColumn(2).setPreferredWidth(200);
-        table.getColumnModel().getColumn(3).setPreferredWidth(400);
-        table.getColumnModel().getColumn(4).setPreferredWidth(200);
-        table.getColumnModel().getColumn(5).setPreferredWidth(200);
+        table.getColumnModel().getColumn(3).setPreferredWidth(200);
+        table.getColumnModel().getColumn(4).setPreferredWidth(400);
 
         //Add table to scroll pane
         sPane = new JScrollPane(table);

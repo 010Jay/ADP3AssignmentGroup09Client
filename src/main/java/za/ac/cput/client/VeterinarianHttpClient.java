@@ -17,7 +17,7 @@ public class VeterinarianHttpClient {
     private final static String READ_URL = "http://localhost:8080/veterinarian/read";
     private final static String UPDATE_URL = "http://localhost:8080/veterinarian/update";
     private final static String DELETE_URL = "http://localhost:8080/veterinarian/delete";
-    private final static String GET_ALL_URL = "http://localhost:8080/veterinarian/getAll";
+    private final static String GET_ALL_URL = "http://localhost:8080/veterinarian/getall";
 
     public static Veterinarian create(Veterinarian veterinarian) {
         ResponseEntity<Veterinarian> response = restTemplate.postForEntity(CREATE_URL, veterinarian, Veterinarian.class);

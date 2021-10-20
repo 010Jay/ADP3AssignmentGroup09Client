@@ -37,7 +37,7 @@ public class CreateVeterinarian extends JFrame implements ActionListener {
         lblSurname = new JLabel("Veterinarian Surname: ", SwingConstants.RIGHT);
         lblPhoneNumber = new JLabel("Phone Number: ", SwingConstants.RIGHT);
         lblEmailAddress = new JLabel("Email Address: ", SwingConstants.RIGHT);
-        lblVetId1 = new JLabel(" ");
+        lblVetId1 = new JLabel("Auto Generated...");
 
         txtName = new JTextField();
         txtSurname = new JTextField();
@@ -112,7 +112,7 @@ public class CreateVeterinarian extends JFrame implements ActionListener {
 
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.pack();
-        this.setSize(640, 420);
+        this.setSize(640, 320);
         this.setVisible(true);
         //Add action listener to buttons | mouse listener to hyperlink
         btnCreate.addActionListener(this);
