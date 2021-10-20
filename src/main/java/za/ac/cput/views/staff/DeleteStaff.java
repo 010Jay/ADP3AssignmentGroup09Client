@@ -130,7 +130,7 @@ public class DeleteStaff extends JFrame implements ActionListener {
         //Frame
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.pack();
-        this.setSize(640, 420);
+        this.setSize(640, 280);
         this.setVisible(true);
     }
 

@@ -65,7 +65,7 @@ public class CreateStaff  extends JFrame implements ActionListener {
     {
         //Add Gridlayout to panels
         northPanel.setLayout(new FlowLayout());
-        centerPanel.setLayout(new GridLayout(6,3));
+        centerPanel.setLayout(new GridLayout(3,3));
         southPanel.setLayout(new GridLayout(2,2));
 
 
@@ -99,10 +99,6 @@ public class CreateStaff  extends JFrame implements ActionListener {
         centerPanel.add(lblSurname);
         centerPanel.add(txtSurname);
         centerPanel.add(emptySpace3);
-        centerPanel.add(emptySpace4);
-        centerPanel.add(emptySpace5);
-        centerPanel.add(emptySpace6);
-        centerPanel.add(emptySpace7);
         //centerPanel.setBackground(Color.decode("#CECECE"));
 
         southPanel.add(emptySpace10);
@@ -123,7 +119,7 @@ public class CreateStaff  extends JFrame implements ActionListener {
         //Frame
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.pack();
-        this.setSize(640, 420);
+        this.setSize(640, 240);
         this.setVisible(true);
     }
 

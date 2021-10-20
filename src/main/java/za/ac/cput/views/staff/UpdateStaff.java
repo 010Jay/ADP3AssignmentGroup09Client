@@ -4,6 +4,7 @@ import za.ac.cput.client.StaffHttpClient;
 import za.ac.cput.entity.Staff;
 import za.ac.cput.factory.StaffFactory;
 import za.ac.cput.views.CustomerMenu;
+import za.ac.cput.views.StaffMenu;
 
 import javax.swing.*;
 import java.awt.*;
@@ -72,7 +73,6 @@ public class UpdateStaff extends JFrame implements ActionListener {
         northPanel.setLayout(new FlowLayout());
         centerPanel.setLayout(new GridLayout(4,3));
         southPanel.setLayout(new GridLayout(2,4));
-        radioPanel.setLayout(new GridLayout(1,2));
 
         //Set font
         lblHeading.setFont(ftHeading);
@@ -131,7 +131,7 @@ public class UpdateStaff extends JFrame implements ActionListener {
         //Frame
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.pack();
-        this.setSize(640, 420);
+        this.setSize(640, 280);
         this.setVisible(true);
     }
 
@@ -204,7 +204,7 @@ public class UpdateStaff extends JFrame implements ActionListener {
         }
         else if(e.getActionCommand().equals("Exit"))
         {
-            new CustomerMenu().setGui();
+            new StaffMenu().setGui();
             this.dispose();
         }
     }
