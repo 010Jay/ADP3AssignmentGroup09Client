@@ -9,7 +9,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.Util.*;
+import java.util.Date;
 
 public class CreateAdoptionRecord extends JFrame implements ActionListener {
 
@@ -42,7 +42,7 @@ public class CreateAdoptionRecord extends JFrame implements ActionListener {
         txtDogId = new JTextField();
         txtCustomerId = new JTextField();
         txtStaffId = new JTextField();
-        lblDate1 = new JLabel();
+        lblDate1 = new JLabel("Auto Generated...");
 
         btnCreate = new JButton("Create");
         btnExit = new JButton("Exit");
@@ -84,7 +84,7 @@ public class CreateAdoptionRecord extends JFrame implements ActionListener {
             btnExit.setFont(ftTextBold);
 
             lblAdoptionRecordId1.setFont(ftText);
-            lblDate1.setFont(ftText)
+            lblDate1.setFont(ftText);
             txtDogId.setFont(ftText);
             txtCustomerId.setFont(ftText);
             txtStaffId.setFont(ftText);
@@ -133,7 +133,7 @@ public class CreateAdoptionRecord extends JFrame implements ActionListener {
         //Frame
             this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             this.pack();
-            this.setSize(640, 420);
+            this.setSize(640, 340);
             this.setVisible(true);
     }
 
@@ -145,17 +145,16 @@ public class CreateAdoptionRecord extends JFrame implements ActionListener {
             int dogId = Integer.parseInt(txtDogId.getText().trim().toString());
             int customerId = Integer.parseInt(txtCustomerId.getText().trim().toString());
             int staffId = Integer.parseInt(txtStaffId.getText().trim().toString());
-            //String date = txtDate.getText().trim().toString();
+            Date date = new Date();
 
-
-            if(dogId.isEmpty() || customerId.isEmpty() || staffId.isEmpty()
+            if(dogId < 0 || customerId < 0 || staffId < 0)
             {
                 JOptionPane.showMessageDialog(null, "Please fill in all information to create a record.");
             }
             else{
                 AdoptionRecord createAdoptionRecord = AdoptionRecordFactory.createAdoptionRecord(dogId, customerId, staffId, date);
 
-                AadoptionRecord result = AdoptionRecordHttpClient.create(createAdoptionRecord);
+                AdoptionRecord result = AdoptionRecordHttpClient.create(createAdoptionRecord);
 
                 if(result != null)
                 {
@@ -164,7 +163,7 @@ public class CreateAdoptionRecord extends JFrame implements ActionListener {
                     txtDogId.setText("");
                     txtCustomerId.setText("");
                     txtStaffId.setText("");
-                    lblDate1.setText(result.getDate());
+                    lblDate1.setText("");
 
                     txtDogId.requestFocus();
                 }

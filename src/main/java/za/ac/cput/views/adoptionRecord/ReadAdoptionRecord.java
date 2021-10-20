@@ -9,7 +9,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.Util.*;
 
 public class ReadAdoptionRecord extends JFrame implements ActionListener {
 
@@ -137,7 +136,7 @@ public class ReadAdoptionRecord extends JFrame implements ActionListener {
         //Frame
             this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             this.pack();
-            this.setSize(640, 420);
+            this.setSize(640, 340);
             this.setVisible(true);
     }
 

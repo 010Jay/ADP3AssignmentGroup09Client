@@ -1,6 +1,6 @@
 package za.ac.cput.views;
 
-import za.ac.cput.views.dog.*;
+import za.ac.cput.views.adoptionRecord.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -60,7 +60,6 @@ public class AdoptionRecordMenu extends JFrame implements ActionListener {
             northPanel.setLayout(new FlowLayout());
             centerPanel.setLayout(new GridLayout(5,3));
             southPanel.setLayout(new GridLayout(2,3));
-
 
         //Set font
             lblHeading.setFont(ftHeading);

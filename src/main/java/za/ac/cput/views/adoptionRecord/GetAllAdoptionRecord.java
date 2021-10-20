@@ -5,7 +5,6 @@ import za.ac.cput.entity.AdoptionRecord;
 import za.ac.cput.views.AdoptionRecordMenu;
 
 import javax.swing.*;
-import java.Util.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -81,7 +80,7 @@ public class GetAllAdoptionRecord extends JFrame implements ActionListener {
             for(int i = 0; i < adoptionRecordList.length; i++) //Create object array to add each row of data to the table
             {
                 for(int k = 0; k < adoptionRecordList.length - 1; k++) {
-                    rows[k] = adoptionRecordList[i].getAdoptionRecordId();
+                    rows[k] = adoptionRecordList[i].getAdoptionId();
                     rows[++k] = adoptionRecordList[i].getDogId();
                     rows[++k] = adoptionRecordList[i].getCustomerId();
                     rows[++k] = adoptionRecordList[i].getStaffId();
@@ -95,8 +94,8 @@ public class GetAllAdoptionRecord extends JFrame implements ActionListener {
             table.getColumnModel().getColumn(0).setPreferredWidth(400);
             table.getColumnModel().getColumn(1).setPreferredWidth(400);
             table.getColumnModel().getColumn(2).setPreferredWidth(200);
-            table.getColumnModel().getColumn(3).setPreferredWidth(400);
-            table.getColumnModel().getColumn(4).setPreferredWidth(200);
+            table.getColumnModel().getColumn(3).setPreferredWidth(200);
+            table.getColumnModel().getColumn(4).setPreferredWidth(400);
 
 
         //Add table to scroll pane

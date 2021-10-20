@@ -7,8 +7,8 @@ package za.ac.cput.factory;
     Date: 05 June 2021
  */
 
-
 import za.ac.cput.entity.AdoptionRecord;
+import za.ac.cput.generic.GenericHelper;
 
 import java.util.Date;
 

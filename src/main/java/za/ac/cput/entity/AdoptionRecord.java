@@ -6,8 +6,6 @@ package za.ac.cput.entity;
     Date: 04 June 2021
  */
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import java.util.Date;
 
 public class AdoptionRecord {// start of AdoptionRecord class
@@ -30,7 +28,6 @@ public class AdoptionRecord {// start of AdoptionRecord class
         this.dogId = builder.dogId;
         this.staffId = builder.staffId;
     }
-
 
     //toString method
     @Override

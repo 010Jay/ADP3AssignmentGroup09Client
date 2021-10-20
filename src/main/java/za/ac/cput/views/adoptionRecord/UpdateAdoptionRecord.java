@@ -6,10 +6,10 @@ import za.ac.cput.factory.AdoptionRecordFactory;
 import za.ac.cput.views.AdoptionRecordMenu;
 
 import javax.swing.*;
-import java.Util.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Date;
 
 public class UpdateAdoptionRecord extends JFrame implements ActionListener {
 
@@ -75,9 +75,8 @@ public class UpdateAdoptionRecord extends JFrame implements ActionListener {
     {
         //Add Gridlayout to panels
             northPanel.setLayout(new FlowLayout());
-            centerPanel.setLayout(new GridLayout(7,3));
+            centerPanel.setLayout(new GridLayout(5,3));
             southPanel.setLayout(new GridLayout(2,4));
-            radioPanel.setLayout(new GridLayout(1,2));
 
         //Set font
             lblHeading.setFont(ftHeading);
@@ -117,7 +116,7 @@ public class UpdateAdoptionRecord extends JFrame implements ActionListener {
 
             centerPanel.add(lblDate);
             centerPanel.add(lblDate1);
-            centerPanel.add(emptySpace4)
+            centerPanel.add(emptySpace5);
             //centerPanel.setBackground(Color.decode("#CECECE"));
 
             southPanel.add(emptySpace10);
@@ -144,7 +143,7 @@ public class UpdateAdoptionRecord extends JFrame implements ActionListener {
         //Frame
             this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             this.pack();
-            this.setSize(640, 420);
+            this.setSize(640, 340);
             this.setVisible(true);
     }
 
@@ -185,9 +184,9 @@ public class UpdateAdoptionRecord extends JFrame implements ActionListener {
             int dogId = Integer.parseInt(txtDogId.getText().trim().toString());
             int customerId = Integer.parseInt(txtCustomerId.getText().trim().toString());
             int staffId = Integer.parseInt(txtStaffId.getText().trim().toString());
+            Date date = new Date();
 
-
-            if(dogId.isEmpty() || customerId.isEmpty() || staffId.isEmpty())
+            if(dogId < 0 || customerId < 0 || staffId < 0)
             {
                 JOptionPane.showMessageDialog(null, "Please fill in all information to create a record");
             }
@@ -203,7 +202,7 @@ public class UpdateAdoptionRecord extends JFrame implements ActionListener {
                     txtDogId.setText("");
                     txtCustomerId.setText("");
                     txtStaffId.setText("");
-                    lblDate1.setText(result.getDate());
+                    lblDate1.setText("");
 
                     txtAdoptionRecordId.requestFocus();
                     setTextFieldToUneditable();
